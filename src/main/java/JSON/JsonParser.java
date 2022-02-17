@@ -29,7 +29,7 @@ public class JsonParser {
             Object obj = jsonParser.parse(reader);
 
             JSONObject url = (JSONObject) obj;
-            setLts((URL) url.get("ltsUrl"));
+            lts = new URL((String) url.get("ltsUrl"));
 
         } catch (IOException | ParseException e) {
             e.printStackTrace();
